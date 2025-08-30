@@ -7,14 +7,14 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 </head>
-<body class="min-h-screen flex items-center justify-center bg-black">
+<body class="min-h-screen flex items-center justify-center bg-black relative">
     
     
 
 
   <section id="form" class="bg-amber-300 text-xl font-bold h-150 p-2 rounded-3xl shadow-amber-200 shadow-2xl">
 
-    <form action="upload" method="post" class="p-12">
+    <form id="myform" class="p-6">
 
         <label for="location">Enter your location:</label><br>
         <input type="text" id="location" name="location" placeholder="Enter location" required class="border-1 border-black w-116 p-2 rounded-2xl mt-4"><br><br>
@@ -25,16 +25,18 @@
         <label for="description">Description:</label><br>
         <textarea id="description" name="description" rows="4" cols="40" placeholder="Write a short description..." class="border-1 border-black w-116 p-2 rounded-2xl mt-4" required></textarea><br><br>
 
-        <div class="bg-red-600 p-4 rounded-3xl w-30 ml-[35%] cursor-pointer hover:scale-110 hover:brightness-105 hover:shadow-md hover:shadow-yellow-200 duration-400 flex items-center justify-center">
         
-        <button type="submit" class="cursor-pointer">Submit</button>
+        
+        <button id="submit_button" type="submit" class="bg-red-600 p-4 rounded-3xl w-30 ml-[35%] cursor-pointer hover:scale-110 hover:brightness-105 hover:shadow-md hover:shadow-yellow-200 duration-400 flex items-center justify-center">Submit</button>
 
-        </div>
-
+         
     </form>
+
 
   </section>
 
-    
+  <div class="w-70 h-20  rounded-2xl animate-pulse absolute top-[2%] left-[80%] text-xl text-white border-2 bg-green-600 font-bold flex items-center justify-center p-4 hidden" id="submit_succesfull">Submission succesfull ✅</div>
+
+    <script src="form.js"></script>
 </body>
 </html>
