@@ -4,11 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+     <!-- leaflet map -->
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 </head>
-<body class="min-h-screen bg-black flex items-center justify-center">
+<body class="min-h-screen bg-black flex items-center justify-center relative">
+
+    <!-- map_div -->
     
-    <div class="text-4xl text-amber-50 font-bold flex items-center justify-center">Coming soooon!</div>
+    <div class="text-4xl text-amber-50 font-bold flex  items-center justify-center h-140 w-380 mb-34 border-2 border-amber-50 rounded-4xl z-0" id="map"></div>
+
+    <!-- map_div -->
+
+    <!-- buttons -->
+
+     <button class="w-45 h-20 rounded-2xl text-xl text-black text-bold flex items-center justify-center left-[36%] bg-yellow-300 absolute top-[84%] mr-2 font-semibold cursor-pointer hover:scale-103 duration-350 hover:border-amber-50 border-2 z-10" onclick="pin_mylocation()">PIN my location</button>
+     
+     <button class="w-45 h-20 rounded-2xl text-xl text-black font-semibold flex items-center justify-center bg-yellow-300 left-[54%] absolute top-[84%] cursor-pointer hover:scale-103 duration-350 hover:border-amber-50 border-2 z-10 " onclick="pin_on_map ()">PIN on map</button>
+
+    <!-- buttons -->
+
+    <div class="w-70 h-20  rounded-2xl animate-pulse absolute top-[2%] left-[80%] text-xl text-white border-2 bg-green-600 font-bold flex items-center hidden justify-center p-4 z-10 " id="pin_on_map_popup" >Click anywhere on the  map to PIN</div>
+
+    <script src="map.js"></script>
+
+
+
 </body>
 </html>
